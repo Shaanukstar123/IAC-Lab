@@ -1,0 +1,44 @@
+$date
+	Thu Nov  4 17:51:58 2021
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module e3_testbench $end
+$var wire 1 ! rtype $end
+$var wire 1 " jtype $end
+$var wire 1 # itype $end
+$var reg 6 $ opcode [5:0] $end
+$scope module dd $end
+$var wire 6 % opcode [5:0] $end
+$var reg 1 # itype $end
+$var reg 1 " jtype $end
+$var reg 1 ! rtype $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b100100 %
+b100100 $
+1#
+0"
+1!
+$end
+#1
+0!
+1"
+b1001 $
+b1001 %
+#2
+b110111 $
+b110111 %
+#3
+0"
+1!
+b0 $
+b0 %
+#4

@@ -1,0 +1,40 @@
+module fsm(
+    input logic clk,
+    input logic reset,
+    input logic sample_valid,
+    input logic[2:0] sample_value,
+    output logic[7:0] sum,
+    output logic[7:0] count
+);
+
+    logic[7:0] sum_prev, count_prev;
+    logic[2:0] sample_value_prev;
+    
+    assign sum_prev = sum; //sum_prev stores the sum prior to anything happening
+    assign count_prev = count; //same as above for count.
+    assign sample_value_prev = sample_value;
+    
+
+always_comb begin
+
+        if (reset == 1 && clk == 1) begin //Reset function
+            sum = 0;
+            count = 0;
+        end
+
+        else if (sample_valid == 1 && clk == 1) begin //Add input function
+            count = count_prev + 1; 
+            sum = sum_prev + sample_value; 
+        end
+
+        else begin //count and sum are updated to their previous state.
+            count = count_prev;
+            sum = sum_prev;
+        end
+        
+    end
+    
+    
+
+
+endmodule

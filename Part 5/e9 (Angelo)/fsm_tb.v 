@@ -1,0 +1,62 @@
+module fsm_tb();
+
+    logic clk;
+    logic reset;
+    logic sample_valid;
+    logic[2:0] sample_value;
+    logic[7:0] sum;
+    logic[7:0] count;
+
+   
+    integer i;
+
+    initial begin
+
+        $dumpfile("fsm_tb.vcd");
+        $dumpvars(0, fsm_tb);
+
+        
+                
+        reset = 1; //Initialises everything: Gives count and sum 
+        clk = 1;   //values of 0.
+        #1;
+
+
+
+        for (i = 0; i < 20; i++) begin
+
+            clk = 1;
+            reset = 0;
+            sample_value = 001;
+            sample_valid = 1;
+            #1;
+
+            clk = 0; //This is here because of a strange bug.
+            #1;      //Two consecutive numbers will not be added if 
+                     //they are equal in value. Having this clock
+                     //to 0 stops this.
+
+        end
+
+
+    
+        $display("sum = %d", sum);      
+        $display("count = %d", count);
+
+
+        
+    $finish;
+    end 
+
+    fsm dut(
+
+        .clk(clk),
+        .reset(reset),
+        .sample_valid(sample_valid),
+        .sample_value(sample_value),
+        .sum(sum),
+        .count(count)
+
+    );
+
+endmodule

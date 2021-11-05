@@ -1,0 +1,59 @@
+$date
+	Fri Nov  5 12:34:27 2021
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module e1_truth_tb $end
+$var wire 3 ! y [2:0] $end
+$var wire 1 " ex $end
+$var reg 3 # a [2:0] $end
+$var reg 4 $ b [3:0] $end
+$scope module dut $end
+$var wire 3 % a [2:0] $end
+$var wire 4 & b [3:0] $end
+$var reg 1 " ex $end
+$var reg 3 ' y [2:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b11 '
+b1 &
+b1 %
+b1 $
+b1 #
+0"
+b11 !
+$end
+#1
+b10 !
+b10 '
+b100 #
+b100 %
+#2
+b0 !
+b0 '
+1"
+b100 $
+b100 &
+#3
+b10 !
+b10 '
+b10 $
+b10 &
+b111 #
+b111 %
+#4
+b0 !
+b0 '
+0"
+b11 $
+b11 &
+b1 #
+b1 %
+#5

@@ -84,6 +84,7 @@ Module: **truthtable**, **don't care**
 - syntax (ie commas, semicolons, @(posedge clk), endcase ecc) 
 - wrong file name (because of cut and paste)
 - wrong width input/output
+- giving a value to a wire without using assign/ logic block (ie logic [1:0] rel = input; WRONG   logic[1:0] rel;  assign rel = input; RIGHT) 
 - 
 
 ### Resources 

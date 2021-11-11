@@ -9,7 +9,7 @@ module e8_waveforms_tb(
         $dumpvars(0,e8_waveforms_tb);
 
         clk = 0;
-        repeat(100000) begin
+        repeat(2050) begin
             #1 clk = !clk;
         end
     end 

@@ -74,6 +74,9 @@ v3: **nested muxes**.<br>
 *e1*
 Module: **truthtable**, **don't care**
 
+*e3*
+Module: opcode interpretor, **error statement for assess** 
+
 ### General Comments 
 - **^** is bitwise **XOR**
 - **~** is bitwise **NOT**

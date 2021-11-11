@@ -77,6 +77,12 @@ Module: **truthtable**, **don't care**
 ### General Comments 
 - **^** is bitwise **XOR**
 - **~** is bitwise **NOT**
+
+### Common Errors 
+- not instantiating the module in the testbench
+- syntax (ie commas, semicolons, @(posedge clk), endcase ecc) 
+- wrong file name (because of cut and paste)
+- wrong width input/output
 - 
 
 ### Resources 

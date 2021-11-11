@@ -81,6 +81,7 @@ Module: opcode interpretor, **error statement for assess**
 - **^** is bitwise **XOR**
 - **~** is bitwise **NOT**
 - **?** is a mux **MUX**. For example "result <= select ? a : b". This means: result = a if select == 1 and result = b if select = 0
+- **else $error ("description of what happened")** to put next to assess to clarify why it failed
 
 ### Common Errors 
 - not instantiating the module in the testbench

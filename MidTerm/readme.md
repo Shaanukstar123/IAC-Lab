@@ -77,6 +77,7 @@ Module: **truthtable**, **don't care**
 ### General Comments 
 - **^** is bitwise **XOR**
 - **~** is bitwise **NOT**
+- **?** is a mux **MUX**. For example "result <= select ? a : b". This means: result = a if select == 1 and result = b if select = 0
 
 ### Common Errors 
 - not instantiating the module in the testbench
@@ -87,6 +88,7 @@ Module: **truthtable**, **don't care**
 
 ### Resources 
 http://web.engr.oregonstate.edu/~traylor/ece474/beamer_lectures/verilog_operators.pdf    **Verilog Operators**
+https://class.ece.uw.edu/cadta/verilog/operators.html **Summary of operators (shorter version for a quick look)**
 
 
 

@@ -77,6 +77,9 @@ Module: **truthtable**, **don't care**, remember to specify data type when the n
 *e3*
 Module: opcode interpretor, **error statement for assess** 
 
+*e4*
+Module: adder with **logic blocks** (xor, and, or, not), instantiation of modules inside a module
+
 ### General Comments 
 - **^** is bitwise **XOR**
 - **~** is bitwise **NOT**

@@ -83,6 +83,9 @@ Module: adder with **logic blocks** (xor, and, or, not), instantiation of module
 *e7*
 Module: alternative ways for if and else, use **default** as an **else** (ie case(var); n: begin ; end; default: begin action end; ), nested cases
 
+*e8*
+Module: waveform generator, smart way of testing all values **split counter in two** (sse Shaanuka's notes on second to last commit) 
+
 ### General Comments 
 - **^** is bitwise **XOR**
 - **~** is bitwise **NOT**

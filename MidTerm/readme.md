@@ -80,6 +80,9 @@ Module: opcode interpretor, **error statement for assess**
 *e4*
 Module: adder with **logic blocks** (xor, and, or, not), instantiation of modules inside a module
 
+*e7*
+Module: alternative ways for if and else, use **default** as an **else** (ie case(var); n: begin ; end; default: begin action end; ), nested cases
+
 ### General Comments 
 - **^** is bitwise **XOR**
 - **~** is bitwise **NOT**

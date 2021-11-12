@@ -1,19 +1,34 @@
-e12 - Regression
-----------------
+e1 - Raster
+-----------
 
-The module `accumulator` is intended to track the running sum of two
-inputs "up" and "down". The output should be:
+Create a module called `raster` that generates a stream of (x,y) raster co-ordinates
+for a 12 (width) x 8 (height) pixel display. In each cycle the module generates
+one (x,y) co-ordinate, proceeding through each pixel in the row y=0 from x=0 to x=11, then
+row y=1 from x=0 to x=11, and so on:
 ```
-sum_{i+1} = ( ( clear_i ? 0 : sum_i ) + up_i + down_i ) mod 2^32
+(0,0),(1,0),(2,0),...,(10,0),(11,0),(0,1),(1,1),(2,1),...,(10,1),(11,1),(0,2),...
 ```
-where values with the subscript i are values before the
-clock edge i, and sum_{i+1} is the value after clock edge i.
-The value of sum_0 is undefined.
 
-There are at least two distinct faults in the implementation of `accumulator`, arising
-from two different mistakes in the module.
+The module has the following ports:
 
-Create test-bench modules `accumulator_tb_1` and `accumulator_tb_2` which test
-for the two different faults. Each test-bench should test for
-just one fault, and should produce a failure code if the fault
-exists, or a success code if that specific fault has been removed.
+- A clock input called `clk`
+- A 1-bit input called `reset` (active high)
+- A 4-bit output called `x`
+- A 4-bit output called `y`
+
+The sequence should start at (0,0) in the cycle following a reset, and then repeatedly
+cycle through the 96 (12x8) co-ordinates.
+
+Until `reset` has been driven high and fallen, the outputs of the module are undefined (i.e. they can take any value).
+
+The outputs are also undefined in cycles where reset was high in the previous cycle.
+
+The sequence of signal values at the rising clock edge could be:
+
+- reset=0, x=?, y=?
+- reset=1, x=?, y=?
+- reset=0, x=?, y=?
+- reset=0, x=0, y=0
+- reset=0, x=1, y=0
+- reset=0, x=2, y=0
+- ...

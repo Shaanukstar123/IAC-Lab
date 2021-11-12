@@ -91,7 +91,7 @@ Module: opcode interpretor, **error statement for assess**
 - giving a value to a wire without using assign/ logic block (ie logic [1:0] rel = input; WRONG   logic[1:0] rel;  assign rel = input; RIGHT) 
 - no timeout in clocked testbench 
 - no dumpfile in testbench 
-- 
+- putting a comma after the last I/O declaration in module (there's no comma)
 
 ### Resources 
 http://web.engr.oregonstate.edu/~traylor/ece474/beamer_lectures/verilog_operators.pdf    **Verilog Operators**

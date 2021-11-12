@@ -72,7 +72,7 @@ v3: **nested muxes**.<br>
 
 ### Exercises
 *e1*
-Module: **truthtable**, **don't care**
+Module: **truthtable**, **don't care**, remember to specify data type when the number is not decimal
 
 *e3*
 Module: opcode interpretor, **error statement for assess** 

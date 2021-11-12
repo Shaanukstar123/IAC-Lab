@@ -92,6 +92,8 @@ Module: opcode interpretor, **error statement for assess**
 - no timeout in clocked testbench 
 - no dumpfile in testbench 
 - putting a comma after the last I/O declaration in module (there's no comma)
+- when instantiating a module inside a module giving the same name to the instance and to one of the logic in the module (ie fadd add1(a, b, add1) is not valid) 
+- 
 
 ### Resources 
 http://web.engr.oregonstate.edu/~traylor/ece474/beamer_lectures/verilog_operators.pdf    **Verilog Operators**

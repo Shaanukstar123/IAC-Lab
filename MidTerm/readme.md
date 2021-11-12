@@ -27,7 +27,7 @@ Error: wrong conditions in module
 ***
 *v5*
 
-Module: **full adder** (1 and 4 bits).<br>
+Module: **full adder** (1 and 4 bits), instantiation of a module from a module.<br>
 TB: loop, inputs are the loop counter, divided by $2^5$ and bitwise ANDed with FFFF (I think it needs to limit the number when it gets too big as the adder can take it only 4 bits.<br>
 Error: 4 bit addition started from the MSB
 Tags: **adder**
